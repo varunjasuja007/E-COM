@@ -4,7 +4,7 @@ import Button from "../Button/Button"
 
 const Hero = () => {
     return (
-        <section className="py-12">
+        <section className="py-1">
             <div className="max-w-[1400px] mx-auto px-10 flex items-center justify-between md:gap-10 gap-5 pt-20 min-h-screen">
 
                 {/* HERO CONTENT */}

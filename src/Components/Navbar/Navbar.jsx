@@ -59,7 +59,7 @@ const Navbar = () => {
           </a>
 
           {/*three dot */}
-          <a href="#" className="zinc-800 text-3xl md:hidden" onClick={toggleMenu} >
+          <a href="#" className="zinc-800 text-3xl md:hidden" onClick={toggleMenu}>
             {showMenu ? <TbMenu3 /> : <TbMenu2 />}
           </a>
         </div>
