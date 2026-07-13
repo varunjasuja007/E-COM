@@ -1,6 +1,6 @@
 import React from "react";
 import img from "../../assets/hero.png";
-import Button from "../Button/Button"
+import Button from "../Button/Button";
 
 const Hero = () => {
     return (
@@ -22,7 +22,7 @@ const Hero = () => {
                         Discover stylish, high-quality clothing made to keep you
                         comfortable and looking your best.
                     </p>
-                    <Button content=" Shop Now" />
+                    <Button content="Shop Now" />
 
                     {/* <button className="mt-8 bg-orange-500 hover:bg-orange-600 text-white px-8 py-4 rounded-full text-lg transition">
                         Shop Now
