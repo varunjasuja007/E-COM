@@ -9,14 +9,16 @@ const Category = () => {
 
     const renderCards = category.map((card) => {
         return (
-            <div className="flex-1">
-                <div>
-                    <img src={card.image} />
+            // CARD
+            <div className="flex-1 basis-[300px]">
+                {/*CARD IMG */}
+                <div className="w-full min-h-[35vh] relative -mb-10 ">
+                    <img src={card.image} className="absolute bottom-0" />
                 </div>
 
-                <div>
-                    <h3> {card.title}</h3>
-                    <p>{card.description}</p>
+                <div className="bg-zinc-100  p-8 rounded-xl">
+                    <h3 className="text-zinc-800 text-3xl font-bold "> {card.title}</h3>
+                    <p className="text-zinc-600 mt-3 mb-5">{card.description}</p>
                     <Button content="See All" />
                 </div>
             </div>
@@ -24,11 +26,11 @@ const Category = () => {
     })
     return (
         <section>
-            <div className="max-w-[1400px] mc-auto px-10 py-20">
+            <div className="max-w-[1400px] mx-auto px-10 py-20">
                 <Heading highlight="Shop" heading="by Category" />
 
                 {/* Category Card */}
-                <div className="flex gap-10">
+                <div className="flex-wrap flex gap-10 md:mt-15 mt-5 ">
                     {renderCards}
                 </div>
             </div>

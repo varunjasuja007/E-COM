@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { FaRegHeart } from "react-icons/fa";
 import { CgProfile } from "react-icons/cg";
 import { FaCartPlus } from "react-icons/fa6";
@@ -9,14 +9,30 @@ import { TbMenu2, TbMenu3 } from "react-icons/tb";
 const Navbar = () => {
 
   const [showMenu, setShowMenu] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
   }
 
+  useEffect(() => {
+
+    const handleScroll = () => {
+
+      setIsScrolled(window.scrollY > 10)
+
+      return () => {
+        window.removeEventListener("scroll", handleScroll)
+      }
+    }
+
+
+    window.addEventListener('scroll', handleScroll)
+  })
+
 
   return (
-    <header className="bg-white fixed top-0 right-10 left-5">
+    <header className={`bg-white fixed top-0 right-0 left-0 z-50 ${isScrolled ? 'drop-shadow-[0_4px_25px_rgba(0,0,0,0.5)]' : ""}`}>
       <nav className=" max-w-[1400px] mx-auto px-10 md:h-[14vh] h-[12vh] flex justify-between items-center">
         <a href="#" className="logo" className="text-3xl font-bold">
 
@@ -67,7 +83,7 @@ const Navbar = () => {
 
         {/*for mobile */}
 
-        <ul className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl rounded-xl p-10 items-center gap-x-15 md:hidden  absolute top-30 -left-full transform -translate-x-1/2 transition-all duration-500ms ${showMenu ? 'left-1/2' : ""}`}>
+        <ul className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl shadow-xl rounded-xl p-10 items-center gap-x-15 md:hidden  absolute top-30 -left-full transform -translate-x-1/2 transition-all duration-500ms ${showMenu ? 'left-1/2' : ""}`}>
           <li>
             <a href="#" className="font-semibold tracking-wider text-orange-500 hover:text-black-500">Home</a>
           </li>
