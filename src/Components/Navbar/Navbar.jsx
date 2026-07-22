@@ -21,13 +21,17 @@ const Navbar = () => {
 
       setIsScrolled(window.scrollY > 10)
 
-      return () => {
-        window.removeEventListener("scroll", handleScroll)
-      }
-    }
+
+    };
 
 
     window.addEventListener('scroll', handleScroll)
+
+    // handleScroll();
+
+    // return () => {
+    //   window.removeEventListener("scroll", handleScroll)
+    // }
   })
 
 
@@ -83,7 +87,7 @@ const Navbar = () => {
 
         {/*for mobile */}
 
-        <ul className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl shadow-xl rounded-xl p-10 items-center gap-x-15 md:hidden  absolute top-30 -left-full transform -translate-x-1/2 transition-all duration-500ms ${showMenu ? 'left-1/2' : ""}`}>
+        <ul className={`flex flex-col gap-y-12 bg-orange-500/15 backdrop-blur-xl shadow-xl rounded-xl p-10 items-center gap-x-15 md:hidden  absolute top-30 -left-full transform -translate-x-1/2 transition-all duration-500 ${showMenu ? 'left-1/2' : ""}`}>
           <li>
             <a href="#" className="font-semibold tracking-wider text-orange-500 hover:text-black-500">Home</a>
           </li>
