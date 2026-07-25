@@ -12,8 +12,8 @@ const Category = () => {
             // CARD
             <div className="flex-1 basis-[300px]" key={card.id}>
                 {/*CARD IMG */}
-                <div className="w-full min-h-[35vh] relative -mb-10 ">
-                    <img src={card.image} className="absolute bottom-0" />
+                <div className="w-full min-h-[38vh] relative mb-25 mt-3 ">
+                    <img src={card.image} className="absolute  object-contain" />
                 </div>
 
                 <div className="bg-zinc-100  p-8 rounded-xl">
@@ -26,7 +26,7 @@ const Category = () => {
     })
     return (
         <section>
-            <div className="max-w-[1400px] mx-auto px-10 py-20">
+            <div className="max-w-[1400px] mx-auto px-10 py-10">
                 <Heading highlight="Shop" heading="by Category" />
 
                 {/* Category Card */}
