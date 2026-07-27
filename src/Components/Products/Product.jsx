@@ -2,14 +2,18 @@ import React, { useState } from 'react'
 import Heading from '../Heading/Heading';
 import ProductList from '../ProductList/ProductList'
 import Cards from '../Cards/Cards';
+import Button from '../Button/Button';
 
 
 const Product = () => {
 
     const categories = ['All', 'T-Shirts', 'Shirts', 'Jeans'];
-    const [activeTab, setActiveTab] = useState('All')
+    const [activeTab, setActiveTab] = useState('All');
 
-    const renderCards = ProductList.map(product => {
+    let filteredItems = activeTab === 'All'
+        ? ProductList : ProductList.filter(item => item.category === activeTab)
+
+    const renderCards = filteredItems.slice(0, 8).map(product => {
         return (
             <Cards image={product.image} title={product.title} price={product.price} />
         )
@@ -21,7 +25,7 @@ const Product = () => {
                 <Heading highlight="Our" heading="Product" />
 
                 {/* Tabs */}
-                <div className='flex gap-3 justify-center mt-10'>
+                <div className='flex flex-wrap gap-3 justify-center mt-10'>
                     {categories.map(category => {
                         return (
                             <button key={category}
@@ -36,8 +40,13 @@ const Product = () => {
 
                 {/* Product listing */}
 
-                <div className='grid grid-cols-4  gap-9 mt-20'>
+                <div className='grid md:grid-cols-4 grid-cols-1 gap-9 mt-20'>
                     {renderCards}
+                </div>
+
+                <div className='mt-15 mx-auto w-fit'>
+                    <Button content="View All" />
+
                 </div>
 
 

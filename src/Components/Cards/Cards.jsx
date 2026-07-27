@@ -24,7 +24,7 @@ const Cards = ({ image, title, price }) => {
             <div className="text-center">
 
                 <h3 className="text-2xl font-semibold">{title}</h3>
-                <p className="text-2xl font-bold mt-4 mc-3">{price}</p>
+                <p className="text-2xl font-bold mt-4 mc-3">{price.toFixed(2)}Rs</p>
                 <Button content="Shop Now" />
             </div>
         </div>
