@@ -4,71 +4,121 @@ import { IoIosArrowForward } from "react-icons/io";
 const Footer = () => {
     return (
         <footer className="bg-zinc-100 py-20">
-            <div className=" flex flex-wrap max-w-[1400px ] mx-auto px-10">
-                <div className="flex-1 basis-[300px]">
-                    <a href="#" className="logo" className="text-3xl font-bold">
+            <div className="max-w-7xl mx-auto px-6 lg:px-10 grid grid-cols-1 lg:grid-cols-3 gap-12">
 
-                        {/*Logo*/}
-
+                {/* Logo */}
+                <div>
+                    <a href="#" className="text-3xl font-bold">
                         Clo<span className="text-orange-500 uppercase">th</span>ing
                     </a>
 
-                    <p className="text-zinc-600 mt-6 max-w-[350px]">
-                        We create stylish, comfortable, and high-quality clothing designed for everyday confidence.
+                    <p className="text-zinc-600 mt-6 leading-7 max-w-sm">
+                        We create stylish, comfortable, and high-quality clothing
+                        designed for everyday confidence.
                     </p>
 
                     <p className="text-zinc-800 mt-6">
-                        2026 &copy; all rights reserved
+                        2026 &copy; All Rights Reserved
                     </p>
                 </div>
 
-                <ul className="flex-1">
-                    <li>
-                        <h5 className="text-zonc-800 text-2xl font-bold "> Company</h5>
-                    </li>
-                    <li className="mt-6">
-                        <a href="#" className="text-zinc-800 hover:text-orange-500">About</a>
-                    </li>
-                    <li className="mt-6">
-                        <a href="#" className="text-zinc-800 hover:text-orange-500"> FAQ's</a>
-                    </li>
-                </ul>
+                {/* Company + Support */}
+                <div className="grid grid-cols-2 gap-10">
 
-                <ul className="flex-1 ">
-                    <li>
-                        <h5 className="text-zonc-800 text-2xl font-bold "> Support</h5>
-                    </li>
-                    <li className="mt-6">
-                        <a href="#" className="text-zinc-800 hover:text-orange-500">Support Center</a>
-                    </li>
-                    <li className="mt-6">
-                        <a href="#" className="text-zinc-800 hover:text-orange-500"> Feedback</a>
-                    </li>
-                    <li className="mt-6">
-                        <a href="#" className="text-zinc-800 hover:text-orange-500"> Contact Us</a>
-                    </li>
+                    {/* Company */}
+                    <div>
+                        <h5 className="text-2xl font-bold text-zinc-800">
+                            Company
+                        </h5>
 
-                </ul>
+                        <ul className="mt-6 space-y-4">
+                            <li>
+                                <a
+                                    href="#"
+                                    className="text-zinc-600 hover:text-orange-500 transition"
+                                >
+                                    About
+                                </a>
+                            </li>
 
+                            <li>
+                                <a
+                                    href="#"
+                                    className="text-zinc-600 hover:text-orange-500 transition"
+                                >
+                                    FAQ's
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Support */}
+                    <div>
+                        <h5 className="text-2xl font-bold text-zinc-800">
+                            Support
+                        </h5>
+
+                        <ul className="mt-6 space-y-4">
+                            <li>
+                                <a
+                                    href="#"
+                                    className="text-zinc-600 hover:text-orange-500 transition"
+                                >
+                                    Support Center
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#"
+                                    className="text-zinc-600 hover:text-orange-500 transition"
+                                >
+                                    Feedback
+                                </a>
+                            </li>
+
+                            <li>
+                                <a
+                                    href="#"
+                                    className="text-zinc-600 hover:text-orange-500 transition"
+                                >
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                {/* Stay Connected */}
                 <div>
-                    <h5 className="text-zinc-800 text-2xl font-bold" >Stay Connected</h5>
+                    <h5 className="text-2xl font-bold text-zinc-800">
+                        Stay Connected
+                    </h5>
 
-                    <p className="mt-6 text-zinc-600">
-                        Questions or Feedbacks <br />
+                    <p className="mt-6 text-zinc-600 leading-7">
+                        Questions or Feedback?
+                        <br />
                         We'd love to hear from you.
                     </p>
 
-                    <div className="flex bg-white p-1 rounded-lg mt-6 ">
-                        <input type="email" name="email" id="email" autoCorrect='off' placeholder="Email Address" className="h-[5vh] pl-4 flex-1 focus:outline-none" />
-                        <button className="bg-gradient-to-b from-orange-400 to-orange-500 p-2 rounded-lg text-white text-2xl hover:to-orange-600 cursor-pointer">
-                            <IoIosArrowForward />
+                    <div className="flex items-center bg-white rounded-lg overflow-hidden shadow-sm mt-6">
+                        <input
+                            type="email"
+                            placeholder="Email Address"
+                            autoCorrect="off"
+                            className="flex-1 px-4 py-3 outline-none"
+                        />
+
+                        <button className="bg-orange-500 hover:bg-orange-600 text-white px-4 py-3 transition">
+                            <IoIosArrowForward size={20} />
                         </button>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </footer>
-    )
-}
+    );
+};
 
 export default Footer;
