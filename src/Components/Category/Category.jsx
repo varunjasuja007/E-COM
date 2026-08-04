@@ -19,7 +19,11 @@ const Category = () => {
                 <div className="bg-zinc-100  p-8 rounded-xl">
                     <h3 className="text-zinc-800 text-3xl font-bold "> {card.title}</h3>
                     <p className="text-zinc-600 mt-3 mb-5">{card.description}</p>
-                    <Button content="See All" />
+                    <a href="/Tshirts" className="bg-gradient-to-b from-orange-400 to-orange-500 
+        text-white px-5 py-3 mt-3 rounded-full hover:scale-105 text-lg hover:to-orange-600 transition-all duration-300ms
+        cursor-pointer">
+                        See All
+                    </a>
                 </div>
             </div>
         )

@@ -8,6 +8,7 @@ import Discount from "../Discount/Discount";
 import Process from "../Process/Process";
 import Testimonials from "../Testimonials/Testimonials";
 import Footer from "../Footer/Footer";
+import Tshirts from "../T-Shirts/Tshirts";
 
 const Home = () => {
     return (
@@ -22,6 +23,7 @@ const Home = () => {
             <Process />
             <Testimonials />
             <Footer />
+            <Tshirts />
 
         </div>
     )
