@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Heading from '../Heading/Heading';
 import ProductList from '../ProductList/ProductList'
 import Cards from '../Cards/Cards';
-import Button from '../Button/Button';
+import { Link } from 'react-router-dom';
 
 
 const Product = () => {
@@ -45,7 +45,11 @@ const Product = () => {
                 </div>
 
                 <div className='mt-15 mx-auto w-fit'>
-                    <Button content="View All" />
+                    <Link to="/allproducts" className="bg-gradient-to-b from-orange-400 to-orange-500 
+        text-white px-5 py-3 mt-3 rounded-full hover:scale-105 text-lg hover:to-orange-600 transition-all duration-300ms
+        cursor-pointer">
+                        View All
+                    </Link>
 
                 </div>
 

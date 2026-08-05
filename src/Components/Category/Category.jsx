@@ -3,7 +3,8 @@ import Heading from "../Heading/Heading";
 import TshirtCat from "../../assets/tshirt.png";
 import ShirtCat from "../../assets/Shirts.png";
 import JeansCat from "../../assets/Jeans.png";
-import Button from "../Button/Button";
+import { Link } from "react-router-dom";
+
 
 const Category = () => {
 
@@ -19,11 +20,11 @@ const Category = () => {
                 <div className="bg-zinc-100  p-8 rounded-xl">
                     <h3 className="text-zinc-800 text-3xl font-bold "> {card.title}</h3>
                     <p className="text-zinc-600 mt-3 mb-5">{card.description}</p>
-                    <a href="/Tshirts" className="bg-gradient-to-b from-orange-400 to-orange-500 
+                    <Link to={card.path} className="bg-gradient-to-b from-orange-400 to-orange-500 
         text-white px-5 py-3 mt-3 rounded-full hover:scale-105 text-lg hover:to-orange-600 transition-all duration-300ms
         cursor-pointer">
                         See All
-                    </a>
+                    </Link>
                 </div>
             </div>
         )
@@ -50,18 +51,21 @@ const category = [
         id: 1,
         title: ' T-SHIRTS',
         description: 'Discover comfortable, stylish,  fits, and designs, perfect for everyday wear and every occasion.',
-        image: TshirtCat
+        image: TshirtCat,
+        path: '/Tshirts'
     },
     {
         id: 2,
         title: 'SHIRTS',
         description: 'Explore our collection of premium shirts, style to keep you looking sharp for every occasion.',
-        image: ShirtCat
+        image: ShirtCat,
+        path: '/Shirts'
     },
     {
         id: 3,
         title: ' JEANS',
         description: 'Stylish jeans crafted for the perfect fit, making them ideal for everyday wear and every occasion.',
-        image: JeansCat
+        image: JeansCat,
+        path: '/Jeans'
     },
 ]

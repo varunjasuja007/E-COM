@@ -14,7 +14,6 @@ const Home = () => {
     return (
         <div>
 
-            <Navbar />
             <Hero />
             <Category />
             <Values />
@@ -22,8 +21,6 @@ const Home = () => {
             <Discount />
             <Process />
             <Testimonials />
-            <Footer />
-            <Tshirts />
 
         </div>
     )

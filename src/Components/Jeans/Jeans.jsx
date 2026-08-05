@@ -1,14 +1,12 @@
 import React from "react";
 import CategoryPage from "../CategoryPage/CategoryPage";
 
-
-const Tshirts = () => {
+const Jeans = () => {
     return (
         <div>
             <CategoryPage />
-
         </div>
     )
 }
 
-export default Tshirts;
+export default Jeans;

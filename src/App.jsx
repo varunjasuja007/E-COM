@@ -2,22 +2,43 @@ import React from "react";
 import Home from "./Components/Home/Home";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Tshirts from "./Components/T-Shirts/Tshirts";
+import Shirts from "./Components/Shirts/Shirts";
+import Jeans from "./Components/Jeans/Jeans";
+import AllProducts from "./Components/AllProducts/AllProducts";
+import Layout from "./Components/Layout/Layout";
 
 const App = () => {
 
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Home />
-
+      element: <Layout />,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+        },
+        {
+          path: '/Tshirts',
+          element: <Tshirts />
+        },
+        {
+          path: '/Shirts',
+          element: <Shirts />
+        },
+        {
+          path: '/Jeans',
+          element: <Jeans />
+        },
+        {
+          path: '/allproducts',
+          element: <AllProducts />
+        }
+      ]
     },
-    {
-      path: '/Tshirts',
-      element: <Tshirts />
-    }
   ])
 
-  return <RounterProvider router={router} />
+  return <RouterProvider router={router} />;
 }
 
 
