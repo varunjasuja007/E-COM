@@ -3,7 +3,7 @@ import Banner from "../Banner/Banner";
 import ProductList from "../ProductList/ProductList";
 import Cards from "../Cards/Cards";
 
-const CategoryPage = ({title}) => {
+const CategoryPage = ({ title, bgImage }) => {
 
     const renderProduct = ProductList.map((product) => {
         return (
@@ -13,7 +13,7 @@ const CategoryPage = ({title}) => {
 
     return (
         <div>
-            <Banner title={title} />
+            <Banner title={title} bgImage={bgImage} />
             {/* <div className="grid grid-cols-1 md:grid-cols-4 gap-9 p-20 max-w-[1400px] mx-auto px-10">
                 {renderProduct}
             </div> */}

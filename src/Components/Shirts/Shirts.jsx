@@ -1,14 +1,14 @@
-import REact from "react";
+import React from "react";
 import CategoryPage from "../CategoryPage/CategoryPage";
-import Banner from "../Banner/Banner";
 
+import banner from "../../assets/banner1.png";
 
 const Shirts = () => {
     return (
         <div>
-            <CategoryPage title="SHIRTS" />
+            <CategoryPage title="SHIRTS" bgImage={banner} />
         </div>
-    )
-}
+    );
+};
 
 export default Shirts;
