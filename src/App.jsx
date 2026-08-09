@@ -8,38 +8,36 @@ import AllProducts from "./Components/AllProducts/AllProducts";
 import Layout from "./Components/Layout/Layout";
 
 const App = () => {
-
   const router = createBrowserRouter([
     {
-      path: '/',
+      path: "/",
       element: <Layout />,
       children: [
         {
-          path: '/',
-          element: <Home />
+          index: true,
+          element: <Home />,
         },
         {
-          path: '/Tshirts',
-          element: <Tshirts />
+          path: "/Tshirts",
+          element: <Tshirts />,
         },
         {
-          path: '/Shirts',
-          element: <Shirts />
+          path: "/Shirts",
+          element: <Shirts />,
         },
         {
-          path: '/Jeans',
-          element: <Jeans />
+          path: "/Jeans",
+          element: <Jeans />,
         },
         {
-          path: '/allproducts',
-          element: <AllProducts />
-        }
-      ]
+          path: "/allproducts",
+          element: <AllProducts />,
+        },
+      ],
     },
-  ])
+  ]);
 
   return <RouterProvider router={router} />;
-}
-
+};
 
 export default App;

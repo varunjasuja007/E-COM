@@ -31,11 +31,11 @@ const Category = () => {
     })
     return (
         <section>
-            <div className="max-w-[1400px] mx-auto px-10 py-10">
+            <div className="max-w-[1400px] mx-auto px-5 py-5">
                 <Heading highlight="Shop" heading="by Category" />
 
                 {/* Category Card */}
-                <div className="flex-wrap flex gap-10 md:mt-15 mt-5 ">
+                <div className="flex-wrap flex gap-10 md:mt-15 mt-2 ">
                     {renderCards}
                 </div>
             </div>

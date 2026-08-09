@@ -6,7 +6,7 @@ import banner2 from "../../assets/banner2.png";
 const Tshirts = () => {
     return (
         <div>
-            <CategoryPage title="T-SHIRTS" bgImage={banner2} />
+            <CategoryPage title="T-SHIRTS" bgImage={banner2} categories={['T-Shirts']} />
 
         </div>
     )

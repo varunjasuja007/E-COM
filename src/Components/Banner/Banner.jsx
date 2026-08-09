@@ -8,7 +8,7 @@ const Banner = ({ title, bgImage }) => {
                 backgroundImage: `url(${bgImage})`,
             }}
         >
-            <h2 className="text-5xl text-zinc-800  p-5 rounded-xl font-bold z-10">
+            <h2 className="text-5xl text-zinc-800 bg-white p-5 rounded-full font-bold z-10">
                 {title}
             </h2>
             <div className="bg-black/20 absolute inset-0">
